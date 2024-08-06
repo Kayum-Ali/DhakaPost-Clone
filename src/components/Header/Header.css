@@ -1,0 +1,25 @@
+.dropdown-container {
+  display: inline;
+  position: relative;
+}
+
+.dropdown-content {
+  position: absolute;
+  top: 35px;
+  right: 0;
+  background: white;
+
+  text-align: center;
+  min-width: 100px;
+  display: none;
+}
+
+.dropdown-content a {
+  display: block;
+}
+.dropdown-container:hover .dropdown-content {
+  display: block;
+  transition: opacity 0.3s ease-in-out;
+}
+@media screen and (min-width: 768px) and (max-width: 1015px) {
+}
