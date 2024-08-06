@@ -8,7 +8,7 @@ const Header = () => {
   const logo = "https://i.ibb.co/Z1v1j7K/download-10-removebg-preview.png";
   return (
     <div>
-      <header className="bg-[#124B65] text-white h-[50px]">
+      <header className="bg-[#124B65] text-white h-[50px] basis-full">
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 justify-self-start md:justify-self-start">
