@@ -6,11 +6,11 @@ const Root = () => {
   return (
     <div className="bg-[#EFF3F6]">
         <Header></Header>
-            <div className="py-3 mx-auto">
+            <div className="py-3 mx-auto mt-12">
                 <img className="basis-3/4 mx-auto" src={adds} alt="" />
             </div>
             <hr />
-            <div className="w-3/4 basis3/4 mx-auto">
+            <div className="lg:w-3/4 w-11/12 basis3/4 mx-auto">
                 <Outlet></Outlet>
             </div>
     </div>

@@ -4,11 +4,20 @@ import { IoCopyOutline } from "react-icons/io5";
 import { MdWhatsapp } from "react-icons/md";
 import { TiSocialFacebook } from "react-icons/ti";
 import News from "../News/News";
+import './LatestNews.css'
 
 const LatestNews = () => {
 
     const addsImg = 'https://i.ibb.co/PDbWbYR/BG.jpg';
+    const addsImg2 = 'https://i.ibb.co/djXGFmT/300X250.jpg';
+    const addsImg3 = 'https://i.ibb.co/XkGS4QT/namaz.jpg';
+    const addsImg4 = 'https://i.ibb.co/dgvFkbP/weather.jpg';
+
+
   const [news, setNews] = useState([]);
+  const [dataLength, setDataLength] = useState(10);
+
+
   useEffect(() => {
     fetch("latestNews.json")
       .then((res) => res.json())
@@ -39,16 +48,23 @@ const LatestNews = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-12 gap-2 my-3 text-[#000]">
-            <div className="col-span-8 border-r-2 border-gray-300 pr-3">
-                {news.map((item, idx) => (
+      <div className="grid grid-cols-8  lg:grid-cols-12 gap-2 my-3 text-[#000]">
+            <div className="lg:col-span-8 col-span-8 lg:border-r-2 lg:border-gray-300 pr-3">
+                {news.slice(0, dataLength).map((item, idx) => (
                     <News key={idx} item={item}></News>
                 ))}
+
+                <div className={dataLength === news.length ? 'hidden' : 'my-3 text-center'}>
+                     <button onClick={()=> setDataLength(news.length)} className="bg-[#25566D] text-white py-2.5 px-5">আরও দেখুন</button>
+                </div>
             </div>
 
-            <div className="col-span-4">
-                 <div>
+            <div className="lg:col-span-4">
+                 <div className="flex flex-col gap-5 adds overflow-hidden">
                     <img src={addsImg} alt="" />
+                    <img src={addsImg2} alt="" />
+                    <img src={addsImg3} alt="" />
+                    <img src={addsImg4} alt="" />
                  </div>
                  
             </div>
