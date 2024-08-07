@@ -33,6 +33,7 @@ const LatestNews = () => {
             <p className="text-base font-medium">4.8k</p>
             <p className="text-[9px]">Shares</p>
           </div>
+          
           <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
             <TiSocialFacebook className="text-[22px] "></TiSocialFacebook>
           </div>
@@ -59,7 +60,7 @@ const LatestNews = () => {
                 </div>
             </div>
 
-            <div className="lg:col-span-4">
+            <div className="lg:col-span-4 hidden lg:block">
                  <div className="flex flex-col gap-5 adds overflow-hidden">
                     <img src={addsImg} alt="" />
                     <img src={addsImg2} alt="" />

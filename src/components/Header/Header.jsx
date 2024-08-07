@@ -12,7 +12,7 @@ const Header = () => {
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 justify-self-start md:justify-self-start">
-            <img className="lg:w-[240px] w-[200px] h-[28px] lg:h-[35px] md:w-[230px] md:h-[32px] " src={logo} alt="" />
+            <img className="lg:w-[240px] w-[190px] h-[28px] lg:h-[35px] md:w-[230px] md:h-[32px] " src={logo} alt="" />
           </div>
 
           {/* nav middle */}
@@ -65,7 +65,7 @@ const Header = () => {
           </div>
           {/* nav right/icon */}
           <div className="lg:col-span-2 md:col-span-2 col-span-1 justify-self-center md:justify-self-end lg:justify-self-end">
-            <div className="flex lg:gap-5 gap-5 md:gap-3 lg:text-3xl md:text-2xl text-3xl">
+            <div className="flex lg:gap-5 gap-4 md:gap-3 lg:text-3xl md:text-2xl text-[26px]">
               <CiDark></CiDark>
               <IoMdNotificationsOutline></IoMdNotificationsOutline>
               <CiSearch></CiSearch>

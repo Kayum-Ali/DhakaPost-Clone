@@ -9,6 +9,7 @@ import {
 // import Header from './components/Header/Header';
 import Root from './components/Root/Root';
 import LatestNews from './components/LatestNews/LatestNews';
+import LatestNewsDetails from './components/LatestNewsDetails/LatestNewsDetails';
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
        {
         path: '/',
         element: <LatestNews></LatestNews>
+       },
+       {
+        path: '/latest-news/:id',
+        element: <LatestNewsDetails></LatestNewsDetails>,
+        loader: () => fetch('latestNews.json')
        }
     ]
   },
