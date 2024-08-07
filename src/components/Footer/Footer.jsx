@@ -82,24 +82,32 @@ const Footer = () => {
 
           {/* footer icon */}
           <div className="flex gap-3 justify-center my-5">
-                <div className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+
+                <Link to={`https://www.facebook.com/DPostOnline/`} className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2" target="_blank">
                    <FaFacebookF></FaFacebookF>
-                </div>
-                <div className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+                </Link>
+
+                <Link target="_blank" to={`https://x.com/dpostonline`} className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                    <BsTwitterX></BsTwitterX>
-                </div>
-                <div  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+                </Link>
+
+                <Link target="_blank" to={`https://www.instagram.com/dpostonline/`} className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                    <IoLogoInstagram></IoLogoInstagram>
-                </div>
-                <div  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+                </Link>
+
+
+                <Link  target="_blank" to={`https://www.youtube.com/c/DhakaPostOfficial`} className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                     <IoLogoYoutube></IoLogoYoutube>
-                </div>
-                <div  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+                </Link>
+
+                <Link  target="_blank" to={`https://www.linkedin.com/company/dpostonline/`}  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                      <IoLogoLinkedin></IoLogoLinkedin>
-                </div>
-                <div  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
+                </Link>
+
+
+                <Link  target="_blank" to={`https://play.google.com/store/apps/details?id=com.dhakapost&pli=1`}  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                      <FaGooglePlay></FaGooglePlay>
-                </div>
+                </Link>
           </div>
         </div>
       </footer>

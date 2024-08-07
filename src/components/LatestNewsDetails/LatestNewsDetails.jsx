@@ -44,27 +44,27 @@ const LatestNewsDetails = () => {
                 <p>957</p>
                 <p>views</p>
               </div>
-              <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] rounded cursor-pointer  p-2 hover:-translate-y-1">
                 <TiSocialFacebook className="text-[22px] "></TiSocialFacebook>
               </div>
-              <div className="bg-[#E5E6E6] rounded p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded p-2 hover:-translate-y-1">
                 <MdWhatsapp className="text-[22px] "></MdWhatsapp>
               </div>
-              <div className="bg-[#E5E6E6] rounded p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded p-2 hover:-translate-y-1">
                 <IoIosShareAlt className="text-[22px] "></IoIosShareAlt>
               </div>
-              <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded  p-2 hover:-translate-y-1">
                 <IoCopyOutline className="text-[22px] "></IoCopyOutline>
               </div>
 
-              <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded  p-2 hover:-translate-y-1">
                 <MdOutlineLocalPrintshop className="text-[22px] "></MdOutlineLocalPrintshop>
               </div>
 
-              <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded  p-2 hover:-translate-y-1">
                 <p className="">অ+</p>
               </div>
-              <div className="bg-[#E5E6E6] rounded  p-2 hover:-translate-y-1">
+              <div className="bg-[#E5E6E6] cursor-pointer rounded  p-2 hover:-translate-y-1">
                 <p className="">অ-</p>
               </div>
             </div>
