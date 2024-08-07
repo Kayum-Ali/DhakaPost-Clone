@@ -49,8 +49,8 @@ const LatestNews = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-8  lg:grid-cols-12 gap-2 my-3 text-[#000]">
-            <div className="lg:col-span-8 col-span-8 lg:border-r-2 lg:border-gray-300 pr-3">
+      <div className="grid grid-cols-1  lg:grid-cols-12 gap-2 my-3 text-[#000]">
+            <div className="lg:col-span-8  lg:border-r-2 lg:border-gray-300 pr-3">
                 {news.slice(0, dataLength).map((item, idx) => (
                     <News key={idx} item={item}></News>
                 ))}
@@ -60,7 +60,7 @@ const LatestNews = () => {
                 </div>
             </div>
 
-            <div className="lg:col-span-4 hidden lg:block">
+            <div className="lg:col-span-4">
                  <div className="flex flex-col gap-5 adds overflow-hidden">
                     <img src={addsImg} alt="" />
                     <img src={addsImg2} alt="" />

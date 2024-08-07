@@ -23,7 +23,7 @@ const Header = () => {
               </li>
 
               <li>
-                <NavLink>জাতীয়</NavLink>
+                <NavLink to={`/national`}>জাতীয়</NavLink>
               </li>
 
               <li>
@@ -43,7 +43,7 @@ const Header = () => {
                   <NavLink>সারাদেশ </NavLink>
                   <IoIosArrowDown className="text-xl"></IoIosArrowDown>
                 </div>
-                <div className="dropdown-content shadow-xl p-2 text-black">
+                <div className="dropdown-content  z-20 shadow-xl p-2 text-black">
                   <a href="">
                     <NavLink>জেলার খবর</NavLink>
                   </a>
