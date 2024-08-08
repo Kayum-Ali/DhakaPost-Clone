@@ -22,7 +22,7 @@ const Header = () => {
       <header
         className={`bg-[#124B65]  text-white ${
           search ? "hidden" : "block"
-        }  basis-full fixed overflow-hidden top-0 w-full z-10`}
+        }  basis-full fixed  top-0 w-full z-10`}
       >
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
@@ -62,7 +62,7 @@ const Header = () => {
                   <NavLink>সারাদেশ </NavLink>
                   <IoIosArrowDown className="text-xl"></IoIosArrowDown>
                 </div>
-                <div className="dropdown-content  z-20 shadow-xl p-2 text-black">
+                <div className="dropdown-content   shadow-xl p-2 text-black">
                   <a href="">
                     <NavLink>জেলার খবর</NavLink>
                   </a>
@@ -105,7 +105,7 @@ const Header = () => {
         <div
           className={` ${
             search
-              ? "absolute block "
+              ? "fixed block "
               : "hidden "
           }  z-50 bg-[#EFF3F6] top-0 justify-center container mx-auto  text-black`}
         >
