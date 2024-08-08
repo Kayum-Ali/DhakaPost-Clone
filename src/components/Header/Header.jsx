@@ -38,7 +38,7 @@ const Header = () => {
           <div className="lg:col-span-8 md:col-span-8 hidden  md:block lg:block">
             <ul className="flex lg:gap-6 md:gap-3 lg:space-x-3 md:space-x-1 lg:pl-3 md:pl-1">
               <li>
-                <NavLink>সর্বশেষ</NavLink>
+                <NavLink to={`/`}>সর্বশেষ</NavLink>
               </li>
 
               <li>
@@ -46,39 +46,39 @@ const Header = () => {
               </li>
 
               <li>
-                <NavLink>রাজনীতি</NavLink>
+                <NavLink to={`/politics`}>রাজনীতি</NavLink>
               </li>
 
               <li>
-                <NavLink>অর্থনীতি</NavLink>
+                <NavLink to={`/economy`}>অর্থনীতি</NavLink>
               </li>
 
               <li>
-                <NavLink>আন্তর্জাতিক</NavLink>
+                <NavLink to={`/international`}>আন্তর্জাতিক</NavLink>
               </li>
 
               <div className="dropdown-container">
                 <div className="flex gap-2 items-center">
-                  <NavLink>সারাদেশ </NavLink>
+                  <NavLink to={`/country`}>সারাদেশ </NavLink>
                   <IoIosArrowDown className="text-xl"></IoIosArrowDown>
                 </div>
                 <div className="dropdown-content   shadow-xl p-2 text-black">
                   <a href="">
-                    <NavLink>জেলার খবর</NavLink>
+                    <NavLink to={`/country-map`}>জেলার খবর</NavLink>
                   </a>
                 </div>
               </div>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink>খেলা</NavLink>
+                <NavLink to={`/sports`}>খেলা</NavLink>
               </li>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink>বিনোদন</NavLink>
+                <NavLink to={`/entertainment`}>বিনোদন</NavLink>
               </li>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink>জবস</NavLink>
+                <NavLink to={`/jobs`}>জবস</NavLink>
               </li>
             </ul>
           </div>
@@ -139,25 +139,25 @@ const Header = () => {
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>রাজনীতি</NavLink>
+             <NavLink to={`/politics`}>রাজনীতি</NavLink>
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>অর্থনীতি</NavLink>
+             <NavLink to={`/economy`}>অর্থনীতি</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>এক্সক্লুসিভ</NavLink>
+            <NavLink to={`/exclusive`}>এক্সক্লুসিভ</NavLink>
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>আন্তর্জাতিক</NavLink>
+            <NavLink to={`/international`}>আন্তর্জাতিক</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>বিনোদন</NavLink>
+            <NavLink to={`/entertainment`}>বিনোদন</NavLink>
           </li>
           <li className=" border-b flex items-center border-b-gray-400 text-base">
             <div className="hover:bg-[#F3F4F6] w-4/5 py-3 px-2 h-full">
-              <NavLink>সারাদেশ </NavLink>
+              <NavLink to={`/country`}>সারাদেশ </NavLink>
             </div>
             <div className=" hover:bg-[#F3F4F6] p-4 flex justify-center  w-1/5 text-xs     px-2 h-auto">
               {open ? (
@@ -175,53 +175,53 @@ const Header = () => {
               open ? "block" : "hidden"
             } py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]`}
           >
-            <NavLink>জেলার খবর</NavLink>
+            <NavLink to={`/country-map`}>জেলার খবর</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>খেলা</NavLink>
-          </li>
-
-          <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>স্বাস্থ্য</NavLink>
+            <NavLink to={`/sports`}>খেলা</NavLink>
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>জবস</NavLink>
+            <NavLink to={`/health`}>স্বাস্থ্য</NavLink>
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>লাইফস্টাইল</NavLink>
+            <NavLink to={`/jobs`}>জবস</NavLink>
           </li>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>তথ্যপ্রযুক্তি</NavLink>
+            <NavLink to={`/lifeStyle`}>লাইফস্টাইল</NavLink>
+          </li>
+
+          <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+            <NavLink to={`/technology`}>তথ্যপ্রযুক্তি</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>ট্যুরিজম</NavLink>
+            <NavLink to={`/tourism`}>ট্যুরিজম</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>শিক্ষা</NavLink>
+            <NavLink to={`/education`}>শিক্ষা</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>প্রবাস</NavLink>
+            <NavLink to={`/probas`}>প্রবাস</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>মতামত</NavLink>
+            <NavLink to={`/opinion`}>মতামত</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>ধর্ম</NavLink>
+            <NavLink to={`/religion`}>ধর্ম</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>ক্যাম্পাস</NavLink>
+            <NavLink to={`/campas`}>ক্যাম্পাস</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>আইন-আদালত</NavLink>
+            <NavLink to={`/law-courts`}>আইন-আদালত</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>এভিয়েশন</NavLink>
+            <NavLink to={`/aviation`}>এভিয়েশন</NavLink>
           </li>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>গণমাধ্যম</NavLink>
+            <NavLink to={`/mass-medis`}>গণমাধ্যম</NavLink>
           </li>
 
           <li
@@ -240,20 +240,20 @@ const Header = () => {
 
           <div className={`${otherOpen ? "block" : "hidden"}`}>
             <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-              <NavLink>কৃষি ও প্রকৃতি</NavLink>
+              <NavLink to={`/agriculture-nature`}>কৃষি ও প্রকৃতি</NavLink>
             </li>
 
             <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-              <NavLink>ছোটদের পোস্ট</NavLink>
+              <NavLink to={`/children-post`}>ছোটদের পোস্ট</NavLink>
             </li>
 
             <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-              <NavLink>পড়াশুনা</NavLink>
+              <NavLink to={`/study`}>পড়াশুনা</NavLink>
             </li>
           </div>
 
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-            <NavLink>কনভার্টার</NavLink>
+            <NavLink to={`https://www.dhakapost.com/unicode-to-bijoy-converter`} target="_blank">কনভার্টার</NavLink>
           </li>
         </ul>
       </div>
