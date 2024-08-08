@@ -12,6 +12,7 @@ import LatestNews from './components/LatestNews/LatestNews';
 import LatestNewsDetails from './components/LatestNewsDetails/LatestNewsDetails';
 import National from './Pages/National';
 
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -31,7 +32,8 @@ const router = createBrowserRouter([
   {
     path: '/national',
     element: <National></National>
-  }
+  },
+
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
