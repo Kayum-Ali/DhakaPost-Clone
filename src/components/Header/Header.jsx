@@ -5,7 +5,6 @@ import { NavLink } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowUp } from "react-icons/io";
 
-
 import "./Header.css";
 import { useState } from "react";
 
@@ -16,9 +15,15 @@ const Header = () => {
   const [otherOpen, setOtherOpen] = useState(false);
   const [toggleMenu, setToggleMenu] = useState(false);
 
+  const [search, setSearch] = useState(false);
+
   return (
     <div>
-      <header className="bg-[#124B65] text-white  h-[50px] basis-full fixed overflow-hidden top-0 w-full z-10">
+      <header
+        className={`bg-[#124B65]  text-white ${
+          search ? "hidden" : "block"
+        }  basis-full fixed overflow-hidden top-0 w-full z-10`}
+      >
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
           <div className="col-span-1 md:col-span-2 lg:col-span-2 justify-self-start md:justify-self-start">
@@ -80,23 +85,54 @@ const Header = () => {
           {/* nav right/icon */}
           <div className="lg:col-span-2 md:col-span-2 col-span-1 justify-self-center md:justify-self-end lg:justify-self-end">
             <div className="flex lg:gap-5 gap-4 md:gap-3 lg:text-3xl md:text-2xl text-[26px]">
-              <CiDark></CiDark>
-              <IoMdNotificationsOutline></IoMdNotificationsOutline>
-              <CiSearch></CiSearch>
-             <div onClick={()=> setToggleMenu(!toggleMenu)}>
-             {
-                toggleMenu ? <IoMenuSharp ></IoMenuSharp>
-                : <RxCross2></RxCross2>
-              }
-             </div>
-              
+              <CiDark className="cursor-pointer"></CiDark>
+              <IoMdNotificationsOutline className="cursor-pointer"></IoMdNotificationsOutline>
+              <CiSearch onClick={() => setSearch(!search)} className="cursor-pointer disabled:"></CiSearch>
+
+              <div onClick={() => setToggleMenu(!toggleMenu)} className="cursor-pointer">
+                {toggleMenu ? (
+                  <RxCross2></RxCross2>
+                ) : (
+                  <IoMenuSharp></IoMenuSharp>
+                )}
+              </div>
             </div>
           </div>
         </nav>
       </header>
+      {/* nav search */}
+      <div className="container mx-auto ">
+        <div
+          className={` ${
+            search
+              ? "absolute block "
+              : "hidden "
+          }  z-50 bg-[#EFF3F6] top-0 justify-center container mx-auto  text-black`}
+        >
+          <div className="flex  items-center ">
+            <div className=" flex-grow ">
+              <input 
+                className="py-2.5 pl-2  outline-none w-full bg-gray-50 flex-grow"
+                type="text"
+                placeholder="ঢাকা পোস্টে খুঁজুন..."
+              />
+            </div>
+            <div className=" w-14 md:w-32 lg:w-32 text-2xl flex justify-center bg-[#D1D5DB] hover:bg-[#A8ABAE] py-2.5 px-5">
+              <CiSearch></CiSearch>
+            </div>
+            <div className=" w-14 md:w-32 lg:w-32 bg-[#e5e7eb] hover:bg-[#A8ABAE] flex justify-center  py-2.5 px-5 text-2xl">
+              <RxCross2 onClick={() => setSearch(!search)}></RxCross2>
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <div className={`mt-12   h-auto absolute  overflow-auto touch-auto hover:will-change-scroll ${toggleMenu ? '-right-96' : 'right-0 top-0 z-50 '}  w-80 bg-white p-2  top-0`}>
-        
+      {/* sidebar */}
+      <div
+        className={`mt-12   h-auto absolute z-50 right-0   overflow-auto touch-auto hover:will-change-scroll ${
+          toggleMenu ? "" : " top-0 hidden "
+        }  lg:w-80 md:w-80 w-60 bg-white p-2  top-0`}
+      >
         <ul>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
             <NavLink to={`/national`}>জাতীয়</NavLink>
@@ -123,25 +159,16 @@ const Header = () => {
             <div className="hover:bg-[#F3F4F6] w-4/5 py-3 px-2 h-full">
               <NavLink>সারাদেশ </NavLink>
             </div>
-          <div  className=" hover:bg-[#F3F4F6] p-4 flex justify-center  w-1/5 text-xs     px-2 h-auto">
-             {open ? (
-               <IoIosArrowUp  onClick={() => setOpen(!open)}></IoIosArrowUp>
+            <div className=" hover:bg-[#F3F4F6] p-4 flex justify-center  w-1/5 text-xs     px-2 h-auto">
+              {open ? (
+                <IoIosArrowUp onClick={() => setOpen(!open)}></IoIosArrowUp>
               ) : (
-                <IoIosArrowDown  onClick={() => setOpen(!open)}></IoIosArrowDown>
+                <IoIosArrowDown onClick={() => setOpen(!open)}></IoIosArrowDown>
               )}
-              </div>
+            </div>
           </li>
 
-          {/* <div className="dropdown-container">
-            <div className="flex gap-2 items-center py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-             
-            </div>
-            <div className="dropdown-content  z-20 shadow-xl p-2 text-black">
-              <a href="">
-                <NavLink>জেলার খবর</NavLink>
-              </a>
-            </div>
-          </div> */}
+         
 
           <li
             className={`${
@@ -204,7 +231,7 @@ const Header = () => {
             <div className="flex items-center text-xl gap-3">
               <NavLink>অন্যান্য</NavLink>
               {otherOpen ? (
-               <IoIosArrowUp></IoIosArrowUp>
+                <IoIosArrowUp></IoIosArrowUp>
               ) : (
                 <IoIosArrowDown></IoIosArrowDown>
               )}
