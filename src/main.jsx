@@ -11,6 +11,7 @@ import Root from './components/Root/Root';
 import LatestNews from './components/LatestNews/LatestNews';
 import LatestNewsDetails from './components/LatestNewsDetails/LatestNewsDetails';
 import National from './Pages/National';
+import NationalDetails from './Pages/NationalDetails';
 
 
 const router = createBrowserRouter([
@@ -32,8 +33,12 @@ const router = createBrowserRouter([
   {
     path: '/national',
     element: <National></National>
-    
   },
+  {
+    path: '/national/:id',
+    element: <NationalDetails></NationalDetails>,
+    loader: () => fetch('national.json')
+  }
 
 ]);
 
