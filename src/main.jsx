@@ -12,12 +12,14 @@ import LatestNews from './components/LatestNews/LatestNews';
 import LatestNewsDetails from './components/LatestNewsDetails/LatestNewsDetails';
 import National from './Pages/National';
 import NationalDetails from './Pages/NationalDetails';
+import NotFound from './Pages/NotFound';
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
+    errorElement: <NotFound></NotFound>,
     children: [
        {
         path: '/',
