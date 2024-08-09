@@ -2,6 +2,8 @@
   display: inline;
   position: relative;
   overflow: visible;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .dropdown-content {
@@ -23,4 +25,11 @@
 
   top: 25px;
   transition: opacity 0.3s ease-in-out;
+}
+li {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+li:hover {
+  background-color: #314e5b;
 }

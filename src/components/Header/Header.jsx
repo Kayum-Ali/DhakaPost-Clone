@@ -22,7 +22,7 @@ const Header = () => {
       <header
         className={`bg-[#124B65]  text-white ${
           search ? "hidden" : "block"
-        }  basis-full fixed  top-0 w-full z-10`}
+        }  basis-full fixed top-0 w-full z-10`}
       >
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
@@ -36,49 +36,49 @@ const Header = () => {
 
           {/* nav middle */}
           <div className="lg:col-span-8 md:col-span-8 hidden  md:block lg:block">
-            <ul className="flex lg:gap-6 md:gap-3 lg:space-x-3 md:space-x-1 lg:pl-3 md:pl-1">
+            <ul className="flex lg:gap-6 md:gap-3 lg:space-x-3 md:space-x-1 lg:pl-3 md:pl-1 ">
               <li>
-                <NavLink to={`/`}>সর্বশেষ</NavLink>
+                <NavLink to={`/`} className={`active:text-violet-500`}>সর্বশেষ</NavLink>
               </li>
 
               <li>
-                <NavLink to={`/national`}>জাতীয়</NavLink>
+                <NavLink to={`/national`} className={`active:text-violet-500`}>জাতীয়</NavLink>
               </li>
 
               <li>
-                <NavLink to={`/politics`}>রাজনীতি</NavLink>
+                <NavLink to={`/politics`} className={`active:text-violet-500`}>রাজনীতি</NavLink>
               </li>
 
               <li>
-                <NavLink to={`/economy`}>অর্থনীতি</NavLink>
+                <NavLink to={`/economy`} className={`active:text-violet-500`}>অর্থনীতি</NavLink>
               </li>
 
               <li>
-                <NavLink to={`/international`}>আন্তর্জাতিক</NavLink>
+                <NavLink to={`/international`} className={`active:text-violet-500`}>আন্তর্জাতিক</NavLink>
               </li>
 
               <div className="dropdown-container">
                 <div className="flex gap-2 items-center">
-                  <NavLink to={`/country`}>সারাদেশ </NavLink>
+                  <NavLink to={`/country`} className={`active:text-violet-500`}>সারাদেশ </NavLink>
                   <IoIosArrowDown className="text-xl"></IoIosArrowDown>
                 </div>
                 <div className="dropdown-content   shadow-xl p-2 text-black">
                   <a href="">
-                    <NavLink to={`/country-map`}>জেলার খবর</NavLink>
+                    <NavLink to={`/country-map`} className={`active:text-violet-500`}>জেলার খবর</NavLink>
                   </a>
                 </div>
               </div>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink to={`/sports`}>খেলা</NavLink>
+                <NavLink to={`/sports`} className={`active:text-violet-500`}>খেলা</NavLink>
               </li>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink to={`/entertainment`}>বিনোদন</NavLink>
+                <NavLink to={`/entertainment`} className={`active:text-violet-500`}>বিনোদন</NavLink>
               </li>
 
               <li className="hidden md:hidden lg:hidden xl:block">
-                <NavLink to={`/jobs`}>জবস</NavLink>
+                <NavLink to={`/jobs`} className={`active:text-violet-500`}>জবস</NavLink>
               </li>
             </ul>
           </div>
@@ -155,7 +155,7 @@ const Header = () => {
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
             <NavLink to={`/entertainment`}>বিনোদন</NavLink>
           </li>
-          <li className=" border-b flex items-center border-b-gray-400 text-base">
+          <p className=" border-b flex items-center border-b-gray-400 text-base">
             <div className="hover:bg-[#F3F4F6] w-4/5 py-3 px-2 h-full">
               <NavLink to={`/country`}>সারাদেশ </NavLink>
             </div>
@@ -166,17 +166,17 @@ const Header = () => {
                 <IoIosArrowDown onClick={() => setOpen(!open)}></IoIosArrowDown>
               )}
             </div>
-          </li>
+          </p>
 
          
 
-          <li
+          <p
             className={`${
               open ? "block" : "hidden"
             } py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]`}
           >
             <NavLink to={`/country-map`}>জেলার খবর</NavLink>
-          </li>
+          </p>
           <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
             <NavLink to={`/sports`}>খেলা</NavLink>
           </li>

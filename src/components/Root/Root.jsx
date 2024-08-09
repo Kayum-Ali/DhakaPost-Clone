@@ -11,7 +11,7 @@ const Root = () => {
                 <img className="basis-3/4 mx-auto" src={adds} alt="" />
             </div>
             <hr className="border-black opacity-80" />
-            <div className="lg:w-3/4 w-full px-2 container overflow-hidden basis3/4 mx-auto">
+            <div className="lg:w-3/4 w-full  container overflow-hidden basis3/4 mx-auto px-3">
                 <Outlet></Outlet>
             </div>
 

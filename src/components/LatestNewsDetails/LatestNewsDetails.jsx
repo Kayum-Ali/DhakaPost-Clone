@@ -20,11 +20,11 @@ const LatestNewsDetails = () => {
   console.log(id, details, detail);
   const { news_title, news_description, post_date, post_time, img } = detail;
   return (
-    <div className=" px-2 mx-auto">
+    <div className="container  mx-auto">
       <div className="grid lg:grid-cols-12 gap-3 py-3">
         <div className="lg:col-span-8 w-full lg:w-auto border-r-[3px] p-3">
           <h3 className="border-b-2 w-max text-black border-black">জাতীয়</h3>
-          <h2 className="text-base lg:text-2xl text-black font-medium my-3">
+          <h2 className="text-sm lg:text-2xl  text-black lg:font-medium my-3">
             {news_title}
           </h2>
           <hr className="bg-black border-black opacity-80 " />
@@ -74,7 +74,7 @@ const LatestNewsDetails = () => {
           </div>
 
           <div className="my-3">
-            <img className="basis-full w-full" src={img} alt="" />
+            <img className="basis-full w-full  " src={img} alt="" />
             <h4>ফাইল ছবি</h4>
           </div>
 
