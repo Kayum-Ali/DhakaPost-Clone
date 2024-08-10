@@ -23,6 +23,7 @@ import TeamPage from './Pages/TeamPage/TeamPage';
 import EconomyPage from './Pages/EconomyPage/EconomyPage';
 import EconomyDetails from './Pages/EconomyDetails/EconomyDetails';
 import AdvertisePage from './Pages/AdvertisePage/AdvertisePage';
+import InternationalPage from './Pages/InternationalPage/InternationalPage';
 
 
 const router = createBrowserRouter([
@@ -91,6 +92,10 @@ const router = createBrowserRouter([
   {
     path: '/advertise',
     element: <AdvertisePage></AdvertisePage>
+  },
+  {
+    path: '/international',
+    element: <InternationalPage></InternationalPage>
   }
 
 
