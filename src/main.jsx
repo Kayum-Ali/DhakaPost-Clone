@@ -19,6 +19,7 @@ import PrivacyPage from './Pages/PrivacyPage/PrivacyPage';
 import TermsOfUsePage from './Pages/TermsOfUsePage/TermsOfUsePage';
 import ContactPage from './Pages/ContactPage/ContactPage';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
+import TeamPage from './Pages/TeamPage/TeamPage';
 
 
 const router = createBrowserRouter([
@@ -70,6 +71,10 @@ const router = createBrowserRouter([
   {
     path: '/about-us',
     element: <AboutUsPage></AboutUsPage>
+  },
+  {
+    path: '/team',
+    element: <TeamPage></TeamPage>
   }
 
 ]);
