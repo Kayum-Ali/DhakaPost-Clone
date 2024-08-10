@@ -15,6 +15,7 @@ import NationalDetails from './Pages/NationalDetails';
 import NotFound from './Pages/NotFound';
 import Politics from './Pages/Politics';
 import PoliticsDetails from './Pages/PoliticsDetails';
+import PrivacyPage from './Pages/PrivacyPage/PrivacyPage';
 
 
 const router = createBrowserRouter([
@@ -50,6 +51,10 @@ const router = createBrowserRouter([
     path: '/politics/:id',
     element: <PoliticsDetails></PoliticsDetails>,
     loader: () => fetch('politics.json')
+  },
+  {
+    path: '/privacy',
+    element: <PrivacyPage></PrivacyPage>
   }
 
 ]);

@@ -27,7 +27,7 @@ const Footer = () => {
           {/* footer Link */}
           <div className="">
             <ul className="flex lg:gap-5 gap-3   flex-wrap justify-center my-8">
-              <Link className="hover:underline">গোপনীয়তার নীতি</Link>
+              <Link to={`/privacy`} className="hover:underline">গোপনীয়তার নীতি</Link>
               <Link className="hover:underline">ব্যবহারের শর্তাবলি</Link>
               <Link className="hover:underline">যোগাযোগ</Link>
               <Link className="hover:underline">আমাদের সম্পর্কে</Link>
