@@ -4,6 +4,7 @@ import Header from "../components/Header/Header";
 
 import Footer from "../components/Footer/Footer";
 import PoliticsData from "../components/PoliticsData/PoliticsData";
+import { Link } from "react-router-dom";
 
 const Politics = () => {
   const addsImg = "https://i.ibb.co/PDbWbYR/BG.jpg";
@@ -44,6 +45,25 @@ const Politics = () => {
             </div>
             <hr className="border-black opacity-80" />
           </div>
+
+            {/* custom link */}
+            <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-12 gap-5 py-5">
+             <Link to={`/politics/29`} className="md:col-span-5 lg:col-span-4 hover:h2:text-blue-400">
+              <h2 className="text-xl  font-medium">ঢাকা কলেজের শিক্ষার্থীদের চিকিৎসা ব্যয় দেবে কলেজ প্রশাসন</h2>
+              <p className="opacity-80  mt-5">বৈষম্যবিরোধী ছাত্র আন্দোলনে আহত ঢাকা কলেজের শিক্ষার্থীদের যাবতীয় চিকিৎসা ব্যয় কলেজ প্রশাসন বহন করবে। একইসঙ্গে পরবর্তীতে কর্তৃপক্ষের নির্দেশনা অনুযায়ী</p>
+
+             </Link>
+              <Link to={`/politics/29`} className="md:col-span-5 lg:col-span-5 lg:border-r-2 border-r-black pr-4 overflow-hidden">
+                  <img className="w-full transform scale-100 hover:scale-105 duration-700 h-full" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723274328/dhaka-colege-bg-20240326143646-20240810131648_etiwm6.webp`} alt="" />
+              </Link>
+              <div className="lg:col-span-3 md:hidden lg:block  overflow-hidden">
+                 <img className="w-full h-full transform scale-100 hover:scale-105 duration-700" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723301012/9897608973079833257_uif7yn.gif`} alt="" />
+              </div>
+
+
+          </div>
+          
+          <hr className="border-black opacity-80" />
 
           <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-12 lg:gap-2">
             <div className="grid lg:grid-cols-10 md:grid-cols-10 grid-cols-5  lg:col-span-10 md:col-span-10 lg:border-r lg:pr-2 border-r-gray-800 md:border-r-0 md:pr-0">

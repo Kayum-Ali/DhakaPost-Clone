@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import InternationalData from "../../components/InternationalData/InternationalData";
+import { Link } from "react-router-dom";
 
 
 const National = () => {
@@ -52,6 +53,27 @@ const National = () => {
             </div>
             <hr className="border-black opacity-80" />
           </div>
+
+
+          
+            {/* custom link */}
+            <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-12 gap-5 py-5">
+             <Link to={`/international/16`} className="md:col-span-5 lg:col-span-4 hover:h2:text-blue-400">
+              <h2 className="text-xl  font-medium">বাংলাদেশ সীমান্তবর্তী মংডুতে ভয়াবহ ড্রোন হামলা, ২০০ নিহতের শঙ্কা</h2>
+              <p className="opacity-80  mt-5">বাংলাদেশ সীমান্তবর্তী মিয়ানমারের মংডুতে ভয়াবহ ড্রোন হামলার ঘটনা ঘটেছে। এতে বহু মানুষের মৃত্যু হয়েছে বলে শঙ্কা করা হচ্ছে। ব্রিটিশ বার্তাসংস্থা রয়টার্স</p>
+
+             </Link>
+              <Link to={`/international/16`} className="md:col-span-5 lg:col-span-5 lg:border-r-2 border-r-black pr-4 overflow-hidden">
+                  <img className="w-full transform scale-100 hover:scale-105 duration-700 h-full" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723312621/rohingya-20240810194230_gnyomu.webp`} alt="" />
+              </Link>
+              <div className="lg:col-span-3 md:hidden lg:block  overflow-hidden">
+                 <img className="w-full h-full transform scale-100 hover:scale-105 duration-700" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723301012/9897608973079833257_uif7yn.gif`} alt="" />
+              </div>
+
+
+          </div>
+          
+          <hr className="border-black opacity-80" />
 
           <div className="grid grid-cols-1 md:grid-cols-10 lg:grid-cols-12 lg:gap-2">
             <div className="grid lg:grid-cols-10 md:grid-cols-10 grid-cols-5  lg:col-span-10 md:col-span-10 lg:border-r lg:pr-2 border-r-gray-800 md:border-r-0 md:pr-0">
