@@ -1,0 +1,7 @@
+figure img {
+  transform: scale(1);
+  transition: all 3s;
+}
+figure img:hover {
+  transform: scale(1.1);
+}

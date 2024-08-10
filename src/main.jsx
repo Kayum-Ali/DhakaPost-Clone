@@ -13,6 +13,8 @@ import LatestNewsDetails from './components/LatestNewsDetails/LatestNewsDetails'
 import National from './Pages/National';
 import NationalDetails from './Pages/NationalDetails';
 import NotFound from './Pages/NotFound';
+import Politics from './Pages/Politics';
+import PoliticsDetails from './Pages/PoliticsDetails';
 
 
 const router = createBrowserRouter([
@@ -40,6 +42,14 @@ const router = createBrowserRouter([
     path: '/national/:id',
     element: <NationalDetails></NationalDetails>,
     loader: () => fetch('national.json')
+  },{
+    path: '/politics',
+    element: <Politics></Politics>
+  },
+  {
+    path: '/politics/:id',
+    element: <PoliticsDetails></PoliticsDetails>,
+    loader: () => fetch('politics.json')
   }
 
 ]);
