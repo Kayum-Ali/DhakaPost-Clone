@@ -4,14 +4,14 @@ import { IoCopyOutline } from "react-icons/io5";
 import { MdWhatsapp } from "react-icons/md";
 import { TiSocialFacebook } from "react-icons/ti";
 import { MdOutlineLocalPrintshop } from "react-icons/md";
-import "./EconomyDetails.css";
+
 
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 
-const EconomyDetails = () => {
-  const adds = "https://i.ibb.co/bPctdNy/11725643505918156321.png";
+const InternationalDetails = () => {
+  const adds = "https://res.cloudinary.com/dqescabbl/image/upload/v1723288976/970X90_1_vbkxoj.jpg";
   const adds1 = "https://i.ibb.co/mBQTmJR/img1.png";
   const icon = "https://i.ibb.co/QXFd0p7/icon.webp";
   const nogodAdd = "https://i.ibb.co/L8dCVjP/17716574972985266077.gif";
@@ -38,7 +38,7 @@ const EconomyDetails = () => {
           <div className="grid lg:grid-cols-12 gap-3 py-3">
             <div className="lg:col-span-8 w-full lg:w-auto border-r-[3px] p-3">
               <h3 className="border-b-2 w-max text-black border-black">
-              অর্থনীতি
+              আন্তর্জাতিক
               </h3>
               <h2 className="text-base lg:text-2xl text-black font-medium my-3">
                 {news_title}
@@ -50,7 +50,7 @@ const EconomyDetails = () => {
                 <div className="flex gap-3">
                   <img className="w-[50px]" src={icon} alt="" />
                   <div>
-                    <p>নিজস্ব প্রতিবেদক</p>
+                    <p>আন্তর্জাতিক ডেস্ক</p>
                     <p>
                       {post_date} {post_time}
                     </p>
@@ -166,12 +166,12 @@ const EconomyDetails = () => {
 
                 {/* 3 page */}
                 <div className="*:bg-[#E3E3E3] flex items-center gap-3 *:rounded-lg">
-                  <Link className="p-3 lg:p-2 hover:text-cyan-900">অন্তর্বর্তীকালীন সরকার</Link>
+                  <Link className="p-3 lg:p-2 hover:text-cyan-900">বিশ্ব সংবাদ</Link>
                   <Link className="p-3 lg:p-2 hover:text-cyan-900">
-                  মুহাম্মদ ইউনূস
+                  ভারত
                   </Link>
                   <Link className="p-3 lg:p-2 hover:text-cyan-900">
-                  নগদ
+                  মমতা ব্যানার্জি
                   </Link>
                 </div>
 
@@ -281,4 +281,4 @@ const EconomyDetails = () => {
   );
 };
 
-export default EconomyDetails;
+export default InternationalDetails;

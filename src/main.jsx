@@ -24,6 +24,7 @@ import EconomyPage from './Pages/EconomyPage/EconomyPage';
 import EconomyDetails from './Pages/EconomyDetails/EconomyDetails';
 import AdvertisePage from './Pages/AdvertisePage/AdvertisePage';
 import InternationalPage from './Pages/InternationalPage/InternationalPage';
+import InternationalDetails from './Pages/InternationalDetails/InternationalDetails';
 
 
 const router = createBrowserRouter([
@@ -96,6 +97,11 @@ const router = createBrowserRouter([
   {
     path: '/international',
     element: <InternationalPage></InternationalPage>
+  },
+  {
+    path: '/international/:id',
+    element: <InternationalDetails></InternationalDetails>,
+    loader: () => fetch('international.json')
   }
 
 

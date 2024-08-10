@@ -163,12 +163,15 @@ const PoliticsDetails = () => {
 
                 {/* 3 page */}
                 <div className="*:bg-[#E3E3E3] flex items-center gap-3 *:rounded-lg">
-                  <Link className="p-3 lg:p-2 hover:text-cyan-900">জামায়াত</Link>
+                  <Link className="p-3 lg:p-2 hover:text-cyan-900">ছাত্র আন্দোলন</Link>
                   <Link className="p-3 lg:p-2 hover:text-cyan-900">
-                  রাজধানীর খবর
+                  ছাত্রলীগ
                   </Link>
                   <Link className="p-3 lg:p-2 hover:text-cyan-900">
-                    বিক্ষোভ
+                  যুবলীগ
+                  </Link>
+                  <Link className="p-3 lg:p-2 hover:text-cyan-900">
+                  আদালত
                   </Link>
                 </div>
 
