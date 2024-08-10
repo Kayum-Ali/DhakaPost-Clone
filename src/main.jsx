@@ -17,6 +17,7 @@ import Politics from './Pages/Politics';
 import PoliticsDetails from './Pages/PoliticsDetails';
 import PrivacyPage from './Pages/PrivacyPage/PrivacyPage';
 import TermsOfUsePage from './Pages/TermsOfUsePage/TermsOfUsePage';
+import ContactPage from './Pages/ContactPage/ContactPage';
 
 
 const router = createBrowserRouter([
@@ -60,6 +61,10 @@ const router = createBrowserRouter([
   {
     path: '/terms-of-use',
     element: <TermsOfUsePage></TermsOfUsePage>
+  },
+  {
+    path: '/contact',
+    element: <ContactPage></ContactPage>
   }
 
 ]);
