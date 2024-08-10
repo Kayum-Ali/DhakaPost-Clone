@@ -18,6 +18,7 @@ import PoliticsDetails from './Pages/PoliticsDetails';
 import PrivacyPage from './Pages/PrivacyPage/PrivacyPage';
 import TermsOfUsePage from './Pages/TermsOfUsePage/TermsOfUsePage';
 import ContactPage from './Pages/ContactPage/ContactPage';
+import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 
 
 const router = createBrowserRouter([
@@ -65,6 +66,10 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <ContactPage></ContactPage>
+  },
+  {
+    path: '/about-us',
+    element: <AboutUsPage></AboutUsPage>
   }
 
 ]);

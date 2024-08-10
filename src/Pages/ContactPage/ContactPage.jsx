@@ -93,7 +93,7 @@ const ContactPage = () => {
             </div>
             <hr className="border-[#D5D4D4] opacity-80" />
 
-            <div className="overflow-hidden h-0 pb-[30%] relative my-6">
+            <div className="overflow-hidden h-0 pb-[30%] px-5 relative my-6">
                 <iframe className="border-2 border-[#1A73E8] h-full w-full top-0 left-0 absolute" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d29202.2578495744!2d90.38503091083986!3d23.808560999999994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7aa733150cd%3A0xa31586446172a480!2sDhaka%20Post!5e0!3m2!1sen!2sbd!4v1723288112612!5m2!1sen!2sbd" width="600" height="450" allowFullScreen   loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
             </div>
               
