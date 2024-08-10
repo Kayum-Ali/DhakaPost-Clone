@@ -34,7 +34,7 @@ const EconomyPage = () => {
         <div className="container mx-auto px-3 lg:px-0">
           <div>
             <h2 className="mt-3 text-2xl">অর্থনীতি</h2>
-            <div className="flex gap-5 py-5">
+            <div className="flex gap-5 flex-wrap py-5">
               <a href="" className="border-r pr-5 border-r-gray-400">
               ব্যাংক
               </a>

@@ -22,6 +22,7 @@ import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import TeamPage from './Pages/TeamPage/TeamPage';
 import EconomyPage from './Pages/EconomyPage/EconomyPage';
 import EconomyDetails from './Pages/EconomyDetails/EconomyDetails';
+import AdvertisePage from './Pages/AdvertisePage/AdvertisePage';
 
 
 const router = createBrowserRouter([
@@ -86,7 +87,12 @@ const router = createBrowserRouter([
     path: '/economy/:id',
     element: <EconomyDetails></EconomyDetails>,
     loader: () => fetch('economy.json')
+  },
+  {
+    path: '/advertise',
+    element: <AdvertisePage></AdvertisePage>
   }
+
 
 
 ]);

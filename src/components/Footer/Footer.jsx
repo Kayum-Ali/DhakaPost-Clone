@@ -18,7 +18,7 @@ const Footer = () => {
   const [hide, setHide] = useState(false)
   return (
     <div>
-      <footer>
+      <footer className="bg-[#EFF5F4]">
         <hr className="border-t-[4px] border-t-[#234E67]" />
 
         <div className="container mx-auto py-10 ">
@@ -41,7 +41,7 @@ const Footer = () => {
 
               <Link to={`/team`} className="hover:underline">আমরা</Link>
               <Link className="hover:underline">আর্কাইভ</Link>
-              <Link className="hover:underline">বিজ্ঞাপন</Link>
+              <Link to={`/advertise`} className="hover:underline">বিজ্ঞাপন</Link>
             </ul>
           </div>
 
@@ -120,7 +120,7 @@ const Footer = () => {
 
           <div className={`flex justify-center relative ${hide ? 'hidden' : ''}`}>
               <img className="lg:w-full w-2/3 lg:basis-full basis-1/2 mx-auto" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723301204/15193642038362954150_lvycyl.gif`} alt="" />
-              <RxCross2 onClick={()=> setHide(!hide)} className={`absolute top-0 right-0 text-white text-2xl animate-bounce ${hide ? 'hidden' : ''}`} ></RxCross2>
+              <RxCross2 onClick={()=> setHide(!hide)} className={`absolute top-0 right-0 text-white text-2xl animate-bounce bg-gray-300 ${hide ? 'hidden' : ''}`} ></RxCross2>
           </div>
         </div>
       </footer>
