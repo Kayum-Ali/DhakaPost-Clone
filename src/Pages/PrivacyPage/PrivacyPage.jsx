@@ -11,7 +11,7 @@ const PrivacyPage = () => {
       </div>
       <hr className="border-black opacity-80" />
 
-      <div className="container mx-auto max-w-[900px]">
+      <div className="container mx-auto basis-[900px] max-w-[900px] px-3 lg:px-0">
         {/* 1st paragraph */}
             <div className="my-6 space-y-3">
                  <h2 className="text-xl font-bold">Privacy Policy</h2>

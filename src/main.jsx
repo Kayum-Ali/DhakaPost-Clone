@@ -16,6 +16,7 @@ import NotFound from './Pages/NotFound';
 import Politics from './Pages/Politics';
 import PoliticsDetails from './Pages/PoliticsDetails';
 import PrivacyPage from './Pages/PrivacyPage/PrivacyPage';
+import TermsOfUsePage from './Pages/TermsOfUsePage/TermsOfUsePage';
 
 
 const router = createBrowserRouter([
@@ -55,6 +56,10 @@ const router = createBrowserRouter([
   {
     path: '/privacy',
     element: <PrivacyPage></PrivacyPage>
+  },
+  {
+    path: '/terms-of-use',
+    element: <TermsOfUsePage></TermsOfUsePage>
   }
 
 ]);
