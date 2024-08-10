@@ -36,7 +36,7 @@ const Header = () => {
 
           {/* nav middle */}
           <div className="lg:col-span-8 md:col-span-8 hidden  md:block lg:block">
-            <ul className="flex lg:gap-6 md:gap-3 lg:space-x-3 md:space-x-1 lg:pl-3 md:pl-1 ">
+            <ul className="flex lg:gap-6 md:gap-3 lg:space-x-3 md:space-x-1 lg:pl-3  md:text-sm lg:text-base">
               <li>
                 <NavLink to={`/`} className={`active:text-violet-500`}>সর্বশেষ</NavLink>
               </li>
@@ -84,7 +84,7 @@ const Header = () => {
           </div>
           {/* nav right/icon */}
           <div className="lg:col-span-2 md:col-span-2 col-span-1 justify-self-center md:justify-self-end lg:justify-self-end">
-            <div className="flex lg:gap-5 gap-4 md:gap-3 lg:text-3xl md:text-2xl text-[26px]">
+            <div className="flex lg:gap-5 gap-4 md:gap-2 md:pr-5  lg:text-3xl md:text-xl text-[26px]">
               <CiDark className="cursor-pointer"></CiDark>
               <IoMdNotificationsOutline className="cursor-pointer"></IoMdNotificationsOutline>
               <CiSearch onClick={() => setSearch(!search)} className="cursor-pointer disabled:"></CiSearch>
