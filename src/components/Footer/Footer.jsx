@@ -9,9 +9,13 @@ import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoYoutube } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGooglePlay } from "react-icons/fa6";
+import { useState } from "react";
+import { RxCross2 } from "react-icons/rx";
 
 const Footer = () => {
   const logo = "https://i.ibb.co/BTWCVWW/logo-removebg-preview.png";
+
+  const [hide, setHide] = useState(false)
   return (
     <div>
       <footer>
@@ -112,6 +116,11 @@ const Footer = () => {
                 <Link  target="_blank" to={`https://play.google.com/store/apps/details?id=com.dhakapost&pli=1`}  className="border border-[rgba(0,0,0,0.3)] hover:border-[rgba(0,0,0,0.8)] p-2">
                      <FaGooglePlay></FaGooglePlay>
                 </Link>
+          </div>
+
+          <div className={`flex justify-center relative ${hide ? 'hidden' : ''}`}>
+              <img className="lg:w-full w-2/3 lg:basis-full basis-1/2 mx-auto" src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723301204/15193642038362954150_lvycyl.gif`} alt="" />
+              <RxCross2 onClick={()=> setHide(!hide)} className={`absolute top-0 right-0 text-white text-2xl animate-bounce ${hide ? 'hidden' : ''}`} ></RxCross2>
           </div>
         </div>
       </footer>
