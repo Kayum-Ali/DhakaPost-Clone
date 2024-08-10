@@ -64,6 +64,7 @@ const LatestNews = () => {
             <div className="lg:col-span-4">
                  <div className="flex flex-col gap-5 adds overflow-hidden">
                     <img src={addsImg} alt="" />
+                    <img src={`https://res.cloudinary.com/dqescabbl/image/upload/v1723301012/9897608973079833257_uif7yn.gif`} alt="" />
                     <img src={addsImg2} alt="" />
                     <img src={addsImg3} alt="" />
                     <img src={addsImg4} alt="" />

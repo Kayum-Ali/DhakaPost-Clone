@@ -20,6 +20,8 @@ import TermsOfUsePage from './Pages/TermsOfUsePage/TermsOfUsePage';
 import ContactPage from './Pages/ContactPage/ContactPage';
 import AboutUsPage from './Pages/AboutUsPage/AboutUsPage';
 import TeamPage from './Pages/TeamPage/TeamPage';
+import EconomyPage from './Pages/EconomyPage/EconomyPage';
+import EconomyDetails from './Pages/EconomyDetails/EconomyDetails';
 
 
 const router = createBrowserRouter([
@@ -75,7 +77,17 @@ const router = createBrowserRouter([
   {
     path: '/team',
     element: <TeamPage></TeamPage>
+  },
+  {
+    path: '/economy',
+    element: <EconomyPage></EconomyPage>
+  },
+  {
+    path: '/economy/:id',
+    element: <EconomyDetails></EconomyDetails>,
+    loader: () => fetch('economy.json')
   }
+
 
 ]);
 
