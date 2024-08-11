@@ -95,6 +95,17 @@ const SportsPage = () => {
               <div className="flex flex-col gap-5 adds overflow-hidden">
                 <img src={addsImg} alt="" />
                 <img src={addsImg2} alt="" />
+                <div className="my-3">
+                         <hr className="border-black opacity-80" />
+                         <h2 className="py-3">সর্বশেষ</h2>
+                         <hr className="border-black opacity-80" />
+                         <Link to={`/nayional/8`} className="hover:text-blue-500 py-2 flex ">
+                            <h2>বিএনপিতে আপাতত কাউকে যোগদান করানো যাবে না</h2>
+                            <img src={`https://i.ibb.co/VxQ4mXY/bnp-bg-20240808224524.jpg`} alt="" />
+                         </Link>
+                         <hr className="border-black opacity-80" />
+                     
+                </div>
                 <img src={addsImg3} alt="" />
                 <img src={addsImg4} alt="" />
                 <img src={beutina} alt="" />
