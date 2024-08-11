@@ -27,6 +27,8 @@ import InternationalPage from './Pages/InternationalPage/InternationalPage';
 import InternationalDetails from './Pages/InternationalDetails/InternationalDetails';
 import SportsPage from './Pages/SportsPage/SportsPage';
 import SportsDetails from './Pages/SportsDetails/SportsDetails';
+import EntertainmentPage from './Pages/EntertainmentPage/EntertainmentPage';
+import EntertainmentDetails from './Pages/EntertainmentDetails/EntertainmentDetails';
 
 
 const router = createBrowserRouter([
@@ -113,7 +115,17 @@ const router = createBrowserRouter([
     path: '/sports/:id',
     element: <SportsDetails></SportsDetails>,
     loader: () => fetch('sports.json')
+  },
+  {
+    path: '/entertainment',
+    element: <EntertainmentPage></EntertainmentPage>
+  },
+  {
+    path: 'entertainment/:id',
+    element: <EntertainmentDetails></EntertainmentDetails>,
+    loader: () => fetch('entertainment.json')
   }
+
 
 
 
