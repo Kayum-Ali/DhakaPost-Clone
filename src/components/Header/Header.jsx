@@ -1,4 +1,4 @@
-import { CiDark, CiSearch } from "react-icons/ci";
+import {  CiSearch } from "react-icons/ci";
 import { IoIosArrowDown, IoMdNotificationsOutline } from "react-icons/io";
 import { IoMenuSharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
@@ -7,6 +7,9 @@ import { IoIosArrowUp } from "react-icons/io";
 
 import "./Header.css";
 import { useState } from "react";
+import useThemeMode from "../../api/useThemeMode";
+import { BsSun } from "react-icons/bs";
+import { MdOutlineDarkMode } from "react-icons/md";
 
 const Header = () => {
   const logo = "https://i.ibb.co/Z1v1j7K/download-10-removebg-preview.png";
@@ -17,12 +20,16 @@ const Header = () => {
 
   const [search, setSearch] = useState(false);
 
+  const { changeTheme, mode } = useThemeMode();
+  console.log(mode)
+
+
   return (
     <div>
       <header
         className={`bg-[#124B65]  text-white ${
           search ? "hidden" : "block"
-        }  basis-full fixed top-0 w-full z-10`}
+        }  basis-full fixed top-0 w-full z-10 `}
       >
         <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
           {/* logo */}
@@ -82,10 +89,14 @@ const Header = () => {
               </li>
             </ul>
           </div>
+          
           {/* nav right/icon */}
           <div className="lg:col-span-2 md:col-span-2 col-span-1 justify-self-center md:justify-self-end lg:justify-self-end">
             <div className="flex lg:gap-5 gap-4 md:gap-2 md:pr-5  lg:text-3xl md:text-xl text-[26px]">
-              <CiDark className="cursor-pointer"></CiDark>
+           <button onClick={changeTheme}>
+               {mode === "dark" ? <BsSun className='text-3xl'></BsSun> : <MdOutlineDarkMode className='text-3xl'></MdOutlineDarkMode>}
+           </button>
+
               <IoMdNotificationsOutline className="cursor-pointer"></IoMdNotificationsOutline>
               <CiSearch onClick={() => setSearch(!search)} className="cursor-pointer disabled:"></CiSearch>
 

@@ -49,21 +49,21 @@ const Footer = () => {
           <div>
             <ul className="flex flex-col flex-wrap justify-center text-center lg:flex-row lg:gap-5 gap-3 items-center text-black">
               <li className="px-3 lg:px-0">
-                <a href="">
+                <a >
                   ৯৫ সোহরাওয়ার্দী এভিনিউ, বারিধারা ডিপ্লোমেটিক জোন, ঢাকা ১২১২।
                 </a>
               </li>
 
               <div className="flex  lg:gap-5 gap-3">
                 <li>
-                  <a className="flex items-center gap-1" href="">
+                  <a className="flex items-center gap-1" >
                     <IoMdCall className="font-bold"></IoMdCall>
                     +৮৮০ ৯৬১৩ ৬৭৮৬৭৮
                   </a>
                 </li>
 
                 <li>
-                  <a className="flex items-center gap-1" href="">
+                  <a className="flex items-center gap-1" >
                     <IoIosPhonePortrait className="font-bold"></IoIosPhonePortrait>
                     +৮৮০ ১৩১৩ ৭৬৭৭৪২
                   </a>
@@ -72,14 +72,14 @@ const Footer = () => {
 
               <div className="flex  lg:gap-5 gap-3">
                 <li>
-                  <a className="flex items-center gap-1" href="">
+                  <a className="flex items-center gap-1" >
                     <MdWhatsapp className="font-bold"></MdWhatsapp>+৮৮০ ১৭৭৭
                     ৭০৭৬০০
                   </a>
                 </li>
 
                 <li>
-                  <a className="flex items-center gap-1" href="">
+                  <a className="flex items-center gap-1" >
                     <MdOutlineMail className="font-bold"></MdOutlineMail>
                     info@dhakapost.com
                   </a>

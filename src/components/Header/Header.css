@@ -30,6 +30,6 @@ li {
   padding-top: 8px;
   padding-bottom: 8px;
 }
-li:hover {
+header li:hover {
   background-color: #314e5b;
 }

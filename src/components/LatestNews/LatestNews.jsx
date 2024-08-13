@@ -25,7 +25,7 @@ const LatestNews = () => {
   }, []);
   return (
     
-    <div className="container mx-auto">
+    <div className="container mx-auto ">
       <div className="flex flex-col lg:flex-row justify-between space-y-2 md:space-y-0 items-center py-3 border-b-2 border-b-[#234e67]">
         <h1 className="text-[#234e67] text-2xl">আজকের খবর</h1>
         <div className="flex items-center gap-2">

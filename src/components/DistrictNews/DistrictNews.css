@@ -1,0 +1,118 @@
+.non-selectable .dhaka,
+.dhaka polygon,
+.dhaka path,
+.dhaka polyline {
+  fill: #ff6347;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.dhaka:hover polygon,
+.dhaka:hover path,
+.dhaka:hover polyline {
+  fill: #ff8872 !important;
+}
+.non-selectable .chattogram,
+.chattogram polygon,
+.chattogram path,
+.chattogram polyline {
+  fill: #3ac993;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.chattogram:hover polygon,
+.chattogram:hover path,
+.chattogram:hover polyline {
+  fill: #72ffca !important;
+}
+.non-selectable .rajshahi,
+.rajshahi polygon,
+.rajshahi path,
+.rajshahi polyline {
+  fill: #ffa954;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.rajshahi:hover polygon,
+.rajshahi:hover path,
+.rajshahi:hover polyline {
+  fill: #ffd5ac !important;
+}
+.non-selectable .khulna,
+.khulna polygon,
+.khulna path,
+.khulna polyline {
+  fill: #32cd32;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.khulna:hover polygon,
+.khulna:hover path,
+.khulna:hover polyline {
+  fill: #80ff80 !important;
+}
+.non-selectable .barishal,
+.barishal polygon,
+.barishal path,
+.barishal polyline {
+  fill: #00ced1;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.barishal:hover polygon,
+.barishal:hover path,
+.barishal:hover polyline {
+  fill: #a3dfe0 !important;
+}
+.non-selectable .sylhet,
+.sylhet polygon,
+.sylhet path,
+.sylhet polyline {
+  fill: #00a3a3;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.sylhet:hover polygon,
+.sylhet:hover path,
+.sylhet:hover polyline {
+  fill: #14b5b5 !important;
+}
+.non-selectable .rangpur,
+.rangpur polygon,
+.rangpur path,
+.rangpur polyline {
+  fill: #eac918;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.rangpur:hover polygon,
+.rangpur:hover path,
+.rangpur:hover polyline {
+  fill: #cec17d !important;
+}
+.non-selectable .mymensingh,
+.mymensingh polygon,
+.mymensingh path,
+.mymensingh polyline {
+  fill: #66bb6a;
+  stroke: white;
+  stroke-width: 0.2px;
+}
+.mymensingh:hover polygon,
+.mymensingh:hover path,
+.mymensingh:hover polyline {
+  fill: #6edf73 !important;
+}
+a {
+  text-decoration: none;
+}
+text {
+  font-size: 12px;
+  text-decoration: none;
+  user-select: none;
+  cursor: pointer;
+  fill: white;
+}
+.non-selectable text {
+  cursor: auto !important;
+  fill: rgb(158, 55, 55);
+}
