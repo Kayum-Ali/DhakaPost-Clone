@@ -1,17 +1,17 @@
 .singleNews:hover h2 {
-  color: blue;
+    color: blue;
 }
 .singleNews img {
-  transition: transform 0.3s ease-in-out;
-  filter: brightness(1.1);
-  overflow: hidden;
-  /* transform: scale(0.95); */
+    transition: transform 0.3s ease-in-out;
+    filter: brightness(1.1);
+    overflow: hidden;
+    /* transform: scale(0.95); */
 }
 .singleNews {
-  cursor: pointer;
+    cursor: pointer;
 }
 .singleNews:hover img {
-  transform: scale(1.1);
+    transform: scale(1.1);
 
-  transition: all 2s;
+    transition: all 2s;
 }
