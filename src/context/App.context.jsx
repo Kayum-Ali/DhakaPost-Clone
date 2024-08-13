@@ -1,14 +1,15 @@
-import React, {
+import  {
     createContext,
-    useEffect,
-    useLayoutEffect,
+    
+    
     useState,
 } from "react";
+
 
 export const DarkContext = createContext({});
 
 const AppContext = ({ children }) => {
-    const [isDark, setIsDark] = useState(true);
+    const [isDark, setIsDark] = useState(false);
 
     const changeTheme = (value) => {
         setIsDark(value);
@@ -20,5 +21,9 @@ const AppContext = ({ children }) => {
         </DarkContext.Provider>
     );
 };
+
+
+
+
 
 export default AppContext;

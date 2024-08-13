@@ -1,9 +1,10 @@
 // import Footer from "../components/Footer/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import Header from "../components/Header/Header";
 import NationalData from "../components/NationalData/NationalData";
 import Footer from "../components/Footer/Footer";
 import { Link } from "react-router-dom";
+import { DarkContext } from "../context/App.context";
 
 const National = () => {
   const addsImg = "https://i.ibb.co/PDbWbYR/BG.jpg";
@@ -22,10 +23,14 @@ const National = () => {
       .then((data) => setNationalData(data));
   }, []);
 
+  const {
+    dark: [isDark],
+} = useContext(DarkContext);
+
   return (
-    <div className="bg-[#EFF3F6]">
+    <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
       <Header></Header>
-      <div className="py-3 px-2 z-0 mx-auto mt-12">
+      <div className={ `py-3 px-2 z-0 mx-auto mt-12 ${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
         <img className="basis-3/4 mx-auto" src={adds} alt="" />
       </div>
       <hr className="border-black opacity-80" />

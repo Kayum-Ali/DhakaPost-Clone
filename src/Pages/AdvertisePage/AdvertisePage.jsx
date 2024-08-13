@@ -1,14 +1,20 @@
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { DarkContext } from "../../context/App.context";
+import { useContext } from "react";
 
 const AdvertisePage = () => {
     const pijja =
     "https://res.cloudinary.com/dqescabbl/image/upload/v1723291019/16872915612011507007_atty22.png";
 
+    const {
+      dark: [isDark],
+  } = useContext(DarkContext);
+
   return (
 
-    <div className="bg-[#EFF3F6]">
+    <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
         <Header></Header>
       <div className="py-3 px-2 z-0 mx-auto mt-12">
         <img className="basis-3/4 mx-auto" src={pijja} alt="" />

@@ -1,5 +1,7 @@
+import { useContext } from "react";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { DarkContext } from "../../context/App.context";
 
 const TeamPage = () => {
   const pijja =
@@ -17,8 +19,11 @@ const TeamPage = () => {
     const Ripon = 'https://res.cloudinary.com/dqescabbl/image/upload/v1723293661/shaid-ripon-20201223174831_bineja.webp';
     const josim ='https://res.cloudinary.com/dqescabbl/image/upload/v1723293798/md-jasim-uddin-20201223174902_ligok8.webp'
 
+    const {
+      dark: [isDark],
+  } = useContext(DarkContext);
   return (
-    <div className="bg-[#EFF3F6]">
+    <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
       <Header></Header>
       <div className="py-3 px-2 z-0 mx-auto mt-12">
         <img className="basis-3/4 mx-auto" src={pijja} alt="" />

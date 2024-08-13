@@ -1,12 +1,18 @@
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer/Footer";
 import Header from "../../components/Header/Header";
+import { DarkContext } from "../../context/App.context";
+import { useContext } from "react";
 
 
 const AboutUsPage = () => {
     const tibbot = 'https://res.cloudinary.com/dqescabbl/image/upload/v1723288976/970X90_1_vbkxoj.jpg'
+
+    const {
+      dark: [isDark],
+  } = useContext(DarkContext);
     return (
-        <div className="bg-[#EFF3F6]">
+        <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
         <Header></Header>
         <div className="py-3 px-2 z-0 mx-auto mt-12">
           <img className="basis-3/4 mx-auto" src={tibbot} alt="" />

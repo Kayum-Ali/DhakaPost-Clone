@@ -5,6 +5,8 @@ import { MdWhatsapp } from "react-icons/md";
 import { TiSocialFacebook } from "react-icons/ti";
 import { MdOutlineLocalPrintshop } from "react-icons/md";
 import './LatestNewsDetails.css'
+import { DarkContext } from "../../context/App.context";
+import { useContext } from "react";
 
 const LatestNewsDetails = () => {
   const adds = "https://i.ibb.co/bPctdNy/11725643505918156321.png";
@@ -19,11 +21,15 @@ const LatestNewsDetails = () => {
   const detail = details.find((detail) => detail.id == id);
   console.log(id, details, detail);
   const { news_title, news_description, post_date, post_time, img } = detail;
+
+  const {
+    dark: [isDark],
+} = useContext(DarkContext);
   return (
-    <div className="container  mx-auto">
+    <div className={`container  mx-auto ${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
       <div className="grid lg:grid-cols-12 gap-3 py-3">
         <div className="lg:col-span-8 w-full lg:w-auto border-r-[3px] p-3">
-          <h3 className="border-b-2 w-max text-black border-black">জাতীয়</h3>
+          <h3 className={`border-b-2 w-max text-black border-black ${isDark ? 'dark-theme' : '' }`} >জাতীয়</h3>
           <h2 className="text-sm lg:text-2xl  text-black lg:font-medium my-3">
             {news_title}
           </h2>

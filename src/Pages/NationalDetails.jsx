@@ -7,6 +7,8 @@ import { MdOutlineLocalPrintshop } from "react-icons/md";
 import "./NationalDetails.css";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
+import { DarkContext } from "../context/App.context";
+import { useContext } from "react";
 
 const NationalDetails = () => {
   const adds = "https://i.ibb.co/bPctdNy/11725643505918156321.png";
@@ -21,23 +23,29 @@ const NationalDetails = () => {
   const detail = details.find((detail) => detail.id == id);
   console.log(id, details, detail);
   const { news_title, news_description, post_date, post_time, img } = detail;
+
+
+  const {
+    dark: [isDark, ],
+} = useContext(DarkContext);
   return (
     <>
       <Header></Header>
-      <div className="py-3 px-2 z-0 mx-auto mt-12">
+        <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
+        <div className="py-3 px-2 z-0 mx-auto mt-12">
                 <img className="basis-3/4 mx-auto" src={adds} alt="" />
             </div>
             <hr className="border-black opacity-80" />
 
 
-      <div className="container mx-auto">
+      <div className={`container mx-auto ${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
         <div className=" px-2 mx-auto">
           <div className="grid lg:grid-cols-12 gap-3 py-3">
             <div className="lg:col-span-8 w-full lg:w-auto border-r-[3px] p-3">
-              <h3 className="border-b-2 w-max text-black border-black">
+              <h3 className={ `border-b-2 w-max text-black border-black ${isDark ? 'dark-theme' : ''}`}>
                 জাতীয়
               </h3>
-              <h2 className="text-base lg:text-2xl text-black font-medium my-3">
+              <h2 className={`text-base lg:text-2xl text-black font-medium my-3  ${isDark ? 'dark-theme' : ''}`}>
                 {news_title}
               </h2>
               <hr className="bg-black border-black opacity-80 " />
@@ -181,7 +189,7 @@ const NationalDetails = () => {
 
                 {/* sorboses */}
                 <div>
-                  <h2 className="text-[#234E67] text-xl py-2">সর্বশেষ</h2>
+                  <h2 className={`text-[#234E67] text-xl py-2  ${isDark ? 'dark-theme' : ''}`}>সর্বশেষ</h2>
                 </div>
                 <hr className="border-gray-800" />
 
@@ -273,6 +281,7 @@ const NationalDetails = () => {
           </div>
         </div>
       </div>
+        </div>
       <Footer></Footer>
     </>
   );

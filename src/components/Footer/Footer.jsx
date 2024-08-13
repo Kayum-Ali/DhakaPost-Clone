@@ -9,22 +9,28 @@ import { IoLogoInstagram } from "react-icons/io";
 import { IoLogoYoutube } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaGooglePlay } from "react-icons/fa6";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { RxCross2 } from "react-icons/rx";
+import { DarkContext } from "../../context/App.context";
 
 const Footer = () => {
   const logo = "https://i.ibb.co/BTWCVWW/logo-removebg-preview.png";
 
   const [hide, setHide] = useState(false)
+
+  const {
+    dark: [isDark],
+} = useContext(DarkContext);
+
   return (
     <div>
-      <footer className="bg-[#EFF5F4]">
+      <footer  className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
         <hr className="border-t-[4px] border-t-[#234E67]" />
 
         <div className="container mx-auto py-10 ">
           {/* logo */}
           <div className="flex lg:justify-between gap-5 items-center text-center md:justify-around flex-col md:flex-row lg:flex-row">
-            <img className="w-48" src={logo} alt="" />
+           <Link to={`/`}> <img className="w-48" src={logo} alt="" /></Link>
             <p className="text-xl font-medium">সম্পাদক: মহিউদ্দিন সরকার</p>
           </div>
 
@@ -47,42 +53,42 @@ const Footer = () => {
 
           {/* footer contact */}
           <div>
-            <ul className="flex flex-col flex-wrap justify-center text-center lg:flex-row lg:gap-5 gap-3 items-center text-black">
+            <ul className={`flex flex-col flex-wrap justify-center text-center lg:flex-row lg:gap-5 gap-3 items-center text-black ${ isDark ? 'dark-theme' : ''}`}>
               <li className="px-3 lg:px-0">
-                <a >
+                <p >
                   ৯৫ সোহরাওয়ার্দী এভিনিউ, বারিধারা ডিপ্লোমেটিক জোন, ঢাকা ১২১২।
-                </a>
+                </p>
               </li>
 
               <div className="flex  lg:gap-5 gap-3">
                 <li>
-                  <a className="flex items-center gap-1" >
+                  <p className="flex items-center gap-1" >
                     <IoMdCall className="font-bold"></IoMdCall>
                     +৮৮০ ৯৬১৩ ৬৭৮৬৭৮
-                  </a>
+                  </p>
                 </li>
 
                 <li>
-                  <a className="flex items-center gap-1" >
+                  <p className="flex items-center gap-1" >
                     <IoIosPhonePortrait className="font-bold"></IoIosPhonePortrait>
                     +৮৮০ ১৩১৩ ৭৬৭৭৪২
-                  </a>
+                  </p>
                 </li>
               </div>
 
               <div className="flex  lg:gap-5 gap-3">
                 <li>
-                  <a className="flex items-center gap-1" >
+                  <p className="flex items-center gap-1" >
                     <MdWhatsapp className="font-bold"></MdWhatsapp>+৮৮০ ১৭৭৭
                     ৭০৭৬০০
-                  </a>
+                  </p>
                 </li>
 
                 <li>
-                  <a className="flex items-center gap-1" >
+                  <p className="flex items-center gap-1" >
                     <MdOutlineMail className="font-bold"></MdOutlineMail>
                     info@dhakapost.com
-                  </a>
+                  </p>
                 </li>
               </div>
             </ul>

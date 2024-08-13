@@ -1,7 +1,7 @@
 import { CiSearch } from "react-icons/ci";
 import { IoIosArrowDown, IoMdNotificationsOutline } from "react-icons/io";
 import { IoMenuSharp } from "react-icons/io5";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { RxCross2 } from "react-icons/rx";
 import { IoIosArrowUp } from "react-icons/io";
 
@@ -33,11 +33,13 @@ const Header = () => {
                 <nav className="grid grid-cols-2 md:grid-cols-12 lg:grid-cols-12 container mx-auto items-center justify-between py-2 gap-4 md:gap-2 ">
                     {/* logo */}
                     <div className="col-span-1 md:col-span-2 lg:col-span-2 justify-self-start md:justify-self-start">
-                        <img
+                      <Link to={`/`}>
+                      <img
                             className="lg:w-[240px] w-[190px] h-[28px] lg:h-[35px] md:w-[230px] md:h-[32px] "
                             src={logo}
                             alt=""
                         />
+                      </Link>
                     </div>
 
                     {/* nav middle */}
@@ -204,131 +206,132 @@ const Header = () => {
                 }  lg:w-80 md:w-80 w-60 bg-white p-2  top-0`}
             >
                 <ul>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/national`}>জাতীয়</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/politics`}>রাজনীতি</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/economy`}>অর্থনীতি</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/exclusive`}>এক্সক্লুসিভ</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/international`}>আন্তর্জাতিক</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/entertainment`}>বিনোদন</NavLink>
                     </li>
-                    <p className=" border-b flex items-center border-b-gray-400 text-base">
+                    <div className=" border-b flex items-center border-b-gray-400 text-base">
                         <div className="hover:bg-[#F3F4F6] w-4/5 py-3 px-2 h-full">
-                            <NavLink to={`/country`}>সারাদেশ </NavLink>
+                            <NavLink  className={ `${isDark ? 'text-black': ''}`} to={`/country`}>সারাদেশ </NavLink>
                         </div>
                         <div className=" hover:bg-[#F3F4F6] p-4 flex justify-center  w-1/5 text-xs     px-2 h-auto">
                             {open ? (
-                                <IoIosArrowUp
+                                <IoIosArrowUp 
+                                className={ `${isDark ? 'text-black': ''}`}
                                     onClick={() => setOpen(!open)}
                                 ></IoIosArrowUp>
                             ) : (
-                                <IoIosArrowDown
+                                <IoIosArrowDown  className={ `${isDark ? 'text-black': ''}`}
                                     onClick={() => setOpen(!open)}
                                 ></IoIosArrowDown>
                             )}
                         </div>
-                    </p>
+                    </div>
 
-                    <p
+                    <div
                         className={`${
                             open ? "block" : "hidden"
                         } py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]`}
                     >
-                        <NavLink to={`/country-map`}>জেলার খবর</NavLink>
-                    </p>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                        <NavLink  className={ `${isDark ? 'text-black': ''}`} to={`/country-map`}>জেলার খবর</NavLink>
+                    </div>
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/sports`}>খেলা</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/health`}>স্বাস্থ্য</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/jobs`}>জবস</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/lifeStyle`}>লাইফস্টাইল</NavLink>
                     </li>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/technology`}>তথ্যপ্রযুক্তি</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/tourism`}>ট্যুরিজম</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/education`}>শিক্ষা</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/probas`}>প্রবাস</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/opinion`}>মতামত</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/religion`}>ধর্ম</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/campas`}>ক্যাম্পাস</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/law-courts`}>আইন-আদালত</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/aviation`}>এভিয়েশন</NavLink>
                     </li>
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink to={`/mass-medis`}>গণমাধ্যম</NavLink>
                     </li>
 
                     <li
-                        className="py-3 px-2 border-b flex items-center  border-b-gray-400 hover:bg-[#F3F4F6]"
+                        className={`py-3 px-2 border-b flex items-center  border-b-gray-400 hover:bg-[#F3F4F6]${isDark ? 'text-black' : ''}`}
                         onClick={() => setOtherOpen(!otherOpen)}
                     >
                         <div className="flex items-center text-xl gap-3">
-                            <NavLink>অন্যান্য</NavLink>
+                            <NavLink  className={ `${isDark ? 'text-black': ''}`}>অন্যান্য</NavLink>
                             {otherOpen ? (
-                                <IoIosArrowUp></IoIosArrowUp>
+                                <IoIosArrowUp  className={ `${isDark ? 'text-black': ''}`}></IoIosArrowUp>
                             ) : (
-                                <IoIosArrowDown></IoIosArrowDown>
+                                <IoIosArrowDown  className={ `${isDark ? 'text-black': ''}`}></IoIosArrowDown>
                             )}
                         </div>
                     </li>
 
                     <div className={`${otherOpen ? "block" : "hidden"}`}>
                         <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-                            <NavLink to={`/agriculture-nature`}>
+                            <NavLink  className={ `${isDark ? 'text-black': ''}`} to={`/agriculture-nature`}>
                                 কৃষি ও প্রকৃতি
                             </NavLink>
                         </li>
 
                         <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-                            <NavLink to={`/children-post`}>
+                            <NavLink  className={ `${isDark ? 'text-black': ''}`} to={`/children-post`}>
                                 ছোটদের পোস্ট
                             </NavLink>
                         </li>
 
-                        <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
-                            <NavLink to={`/study`}>পড়াশুনা</NavLink>
+                        <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
+                            <NavLink  className={ `${isDark ? 'text-black': ''}`} to={`/study`}>পড়াশুনা</NavLink>
                         </li>
                     </div>
 
-                    <li className="py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6]">
+                    <li className={`py-3 px-2 border-b border-b-gray-400 hover:bg-[#F3F4F6] ${isDark ? 'text-black' : ''}`}>
                         <NavLink
                             to={`https://www.dhakapost.com/unicode-to-bijoy-converter`}
                             target="_blank"

@@ -1,11 +1,12 @@
 // import Footer from "../components/Footer/Footer";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 
 
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import InternationalData from "../../components/InternationalData/InternationalData";
 import { Link } from "react-router-dom";
+import { DarkContext } from "../../context/App.context";
 
 
 const InternationalPage = () => {
@@ -25,8 +26,12 @@ const InternationalPage = () => {
       .then((data) => setInternationalData(data));
   }, []);
 
+
+  const {
+    dark: [isDark],
+} = useContext(DarkContext);
   return (
-    <div className="bg-[#EFF3F6]">
+    <div  className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
       <Header></Header>
       <div className="py-3 px-2 z-0 mx-auto mt-12">
         <img className="basis-3/4 mx-auto" src={walton} alt="" />

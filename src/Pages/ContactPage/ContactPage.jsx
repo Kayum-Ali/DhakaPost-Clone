@@ -5,6 +5,8 @@ import { FaWhatsapp } from "react-icons/fa";
 import { IoIosPhonePortrait } from "react-icons/io";
 import { MdOutlineMarkEmailUnread } from "react-icons/md";
 import { IoLocationOutline } from "react-icons/io5";
+import { DarkContext } from "../../context/App.context";
+import { useContext } from "react";
 
 
 
@@ -12,9 +14,13 @@ import { IoLocationOutline } from "react-icons/io5";
 
 
 const ContactPage = () => {
-    const walton = 'https://res.cloudinary.com/dqescabbl/image/upload/v1723283697/11262198246645138598_xjbefy.jpg'
+    const walton = 'https://res.cloudinary.com/dqescabbl/image/upload/v1723283697/11262198246645138598_xjbefy.jpg';
+
+    const {
+      dark: [isDark],
+  } = useContext(DarkContext);
   return (
-    <div className="bg-[#EFF3F6]">
+    <div className={`${isDark ? "bg-[#26292C] text-white" : "bg-[#EFF3F6]"}`}>
       <Header></Header>
         <div className="py-3 px-2 z-0 mx-auto mt-12">
             <img className="basis-3/4 mx-auto" src={walton} alt="" />

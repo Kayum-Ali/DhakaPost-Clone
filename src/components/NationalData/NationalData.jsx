@@ -1,11 +1,17 @@
 import propTypes from 'prop-types'
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { DarkContext } from '../../context/App.context';
 
 const NationalData = ({data}) => {
    
     const {id,news_title,post_date,post_time,img}= data;
+
+    // const {
+    //     dark: [isDark, changeTheme],
+    // } = useContext(DarkContext);
     return (
-        <div className='col-span-5'>
+        <div className={`col-span-5 `}>
              <Link to={`/national/${id}`}  className=" grid grid-cols-5 py-2  singleNews lg:border-r border-r-gray-500 lg:pr-3 md:border-r md:pr-3 border-b border-b-gray-500 p-3">
 
                 <div className="col-span-3  py-2 ">
