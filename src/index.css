@@ -13,3 +13,5 @@ body {
 .dark-theme {
   color: white !important;
 }
+
+@import "preline";

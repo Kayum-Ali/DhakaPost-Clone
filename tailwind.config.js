@@ -10,7 +10,7 @@ export default {
   },
   plugins: [
     require('daisyui'),
-    require('preline/plugin'),
+    require('preline/plugin'),  
   ],
 }
 
